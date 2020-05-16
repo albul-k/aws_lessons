@@ -1,0 +1,64 @@
+c:\Users\konst>ssh -i aws_test.pem ubuntu@18.223.188.24
+Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-1065-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.comWelcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-1065-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat May 16 12:49:31 UTC 2020
+
+  System load:  0.0               Processes:           87
+  Usage of /:   13.7% of 7.69GB   Users logged in:     0
+  Memory usage: 14%               IP address for eth0: 172.31.30.32
+  Swap usage:   0%
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-30-32:~$ ls
+ubuntu@ip-172-31-30-32:~$ mkdir first second
+ubuntu@ip-172-31-30-32:~$ ls
+first  second
+ubuntu@ip-172-31-30-32:~$ cd first
+ubuntu@ip-172-31-30-32:~/first$ echo 'print(1)' first.py
+print(1) first.py
+ubuntu@ip-172-31-30-32:~/first$ echo 'print(1)' > first.py
+ubuntu@ip-172-31-30-32:~/first$ cd
+ubuntu@ip-172-31-30-32:~$ cd first
+ubuntu@ip-172-31-30-32:~/first$ ls
+first.py
+ubuntu@ip-172-31-30-32:~/first$ less first.py
+ubuntu@ip-172-31-30-32:~/first$ cd
+ubuntu@ip-172-31-30-32:~$ cd second
+ubuntu@ip-172-31-30-32:~/second$ echo 'print(2)' > second.py
+ubuntu@ip-172-31-30-32:~/second$ ls
+second.py
+ubuntu@ip-172-31-30-32:~/second$ less second.py
+ubuntu@ip-172-31-30-32:~/second$ cd
+ubuntu@ip-172-31-30-32:~$ mv second/second.py first/
+ubuntu@ip-172-31-30-32:~$ ls first
+first.py  second.py
+ubuntu@ip-172-31-30-32:~$ rm -r second
+ubuntu@ip-172-31-30-32:~$ ls
+first
+ubuntu@ip-172-31-30-32:~$ mv first first_second
+ubuntu@ip-172-31-30-32:~$ ls
+first_second
+ubuntu@ip-172-31-30-32:~$ rm -r first_second/
+ubuntu@ip-172-31-30-32:~$ ls
+ubuntu@ip-172-31-30-32:~$
