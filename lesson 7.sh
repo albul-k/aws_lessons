@@ -43,7 +43,7 @@ tbb.py
 ttt.py
 
 # step 1-3: find all t*.py 
-ubuntu@ip-172-31-39-37:~$ ls | grep 't.*\.\p\y'
+ubuntu@ip-172-31-39-37:~$ ls | grep '^t.*.py$'
 taa.py
 tbb.py
 ttt.py
@@ -51,11 +51,12 @@ ttt.py
 # step 2-1: add print() to some files
 ubuntu@ip-172-31-39-37:~$ echo 'print("aaa")' > aaa.py
 ubuntu@ip-172-31-39-37:~$ echo 'print("ccc")' > ccc.py
+ubuntu@ip-172-31-39-37:~$ echo 'print("text")' > ddd.txt
 ubuntu@ip-172-31-39-37:~$ cat aaa.py
 print("aaa")
 
 # step 2-2: show files containig 'print' string
-ubuntu@ip-172-31-39-37:~$ grep -rl 'print' /home/ubuntu
+ubuntu@ip-172-31-39-37:~$ ls | grep -rl 'print' /home/ubuntu/*.py
 /home/ubuntu/aaa.py
 /home/ubuntu/ccc.py
 
